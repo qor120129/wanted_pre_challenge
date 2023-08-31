@@ -1,25 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@500&display=swap');
 
-body{
+body {
   font-family: 'Lato', sans-serif;
   color: #333;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
   overflow-x: hidden;
-} 
-img{
+  background: #F9FAFC;
+}
+
+img {
   display: block;
 }
-a{
+
+a {
   text-decoration: none;
   cursor: pointer;
+  color: #333;
 }
-.inner{
-  max-width: 1360px;
-  padding: 40px 40px;
+
+.inner {
+  max-width: 1440px;
+  padding: 0 40px;
   margin: 0 auto;
   position: relative;
+  box-sizing: border-box;
 }
 
 /* HEADER */
@@ -34,32 +40,48 @@ header {
   border-bottom: 1px solid rgba(235, 235, 235, 1);
   align-items: center;
 }
-header > .inner{
+
+header>.inner {
   height: 90px;
-  padding: 0 40px;
+  /* padding: 0 40px; */
 }
-header >.inner nav{
+
+header>.inner nav {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-header >.inner nav ul li{
+
+header>.inner nav .menu_btn{
+width: 27px;
+}
+
+header>.inner nav .right_nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+header>.inner nav ul li {
   padding: 30px;
   cursor: pointer;
 }
-header .menu{
+
+header .menu {
   display: flex;
   align-items: center;
 }
-header .menu li a:not(.logo){
+
+header .menu li a {
   color: #1D1F24;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 1.75px;
   opacity: 0.2;
 }
-header .menu li:hover a:not(.logo){
+
+header .menu li:hover a {
   opacity: 1;
   transition: opacity .3s;
   -webkit-transition: opacity .3s;
@@ -67,8 +89,106 @@ header .menu li:hover a:not(.logo){
   -ms-transition: opacity .3s;
   -o-transition: opacity .3s;
 }
-.hamberger{
+
+.hamberger {
   width: 27px;
 }
 
+/* FOOTER */
+footer {
+  background: #1D1F24;
+  padding: 40px 0;
+}
 
+footer .footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 3%;
+  row-gap: 45px;
+}
+
+footer .footer .copywriter {
+  width: 195px;
+  opacity: 0.7;
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  margin-top: 6px;
+}
+
+footer .footer .navigation {
+  display: grid;
+  flex: 1;
+  flex-wrap: wrap;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 12px;
+
+}
+
+footer .footer .navigation a {
+  color: #FFF;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  line-height: 21px;
+  width: 130px;
+}
+
+
+footer .footer .socials {
+  /* width: 300px; */
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+footer .footer .social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 19px;
+}
+
+footer .footer .social .title {
+  opacity: 0.7;
+  color: #FFF;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+footer .footer .socials form {
+  display: flex;
+}
+
+footer .footer .socials form .email {
+  padding: 7px 15px;
+  flex-shrink: 0;
+  line-height: 22px;
+  border: 0;
+  box-sizing: border-box;
+  width: 180px;
+  margin: 0;
+  outline: none;
+}
+
+footer .footer .socials form .btn {
+  padding: 9px 27px;
+  background-color: #FF565C;
+  color: #FFF;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border: none;
+  box-sizing: border-box;
+  width: 120px;
+}
